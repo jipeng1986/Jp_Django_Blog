@@ -1,0 +1,5 @@
+include 标签
+{% include %} 标签允许在模板中包含其它的模板的内容。
+
+下面这个例子都包含了 nav.html 模板：
+{% include "nav.html" %}
