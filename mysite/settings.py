@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'account',
+    'password_reset',
 ]
 
 MIDDLEWARE = [
@@ -132,8 +133,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static/")
 ]
 
 # 定义登录后跳转页面
 LOGIN_REDIRECT_URL = '/blog/'
+
+# 邮件定义
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST_USER = '312911698@qq.com'
+EMAIL_HOST_PASSWORD = "aekglkrevexbjec"
+EMAIL_POST = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "312911698@qq.com"
